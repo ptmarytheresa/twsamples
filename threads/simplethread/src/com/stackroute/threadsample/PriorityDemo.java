@@ -1,14 +1,18 @@
 package com.stackroute.threadsample;
-
+class Task extends  Thread
+{
+    public void run()
+    {
+        System.out.println("Thread " + Thread.currentThread().getPriority());
+    }
+}
 public class PriorityDemo {
     public static void main(String[] args) {
-        Thread low  = new Thread(() -> System.out.println("Low priority task"));
-        Thread high = new Thread(() -> System.out.println("High priority task"));
-
-        low.setPriority(Thread.MIN_PRIORITY);   // 1
-        high.setPriority(Thread.MAX_PRIORITY);  // 10  (default is 5)
-
-        low.start();
-        high.start();
+       Task t1=new Task();
+        t1.setPriority(Thread.MIN_PRIORITY);
+        Task t2=new Task();
+        t2.setPriority(Thread.MAX_PRIORITY);
+            t1.start();
+        t2.start();
     }
 }

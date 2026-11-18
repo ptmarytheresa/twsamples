@@ -1,5 +1,6 @@
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+//Virtual Threads (Java 21)
 
 public class HotelAvailability6 {
 
@@ -39,3 +40,24 @@ public class HotelAvailability6 {
         }
     }
 }
+
+//Virtual threads are lightweight threads managed by the JVM.
+//newVirtualThreadPerTaskExecutor() creates a new virtual thread per submitted task.
+//They are particularly useful for I/O-intensive workloads.
+//They do not automatically make CPU-intensive tasks faster
+
+//// Start a single virtual thread
+//Thread.startVirtualThread(() -> System.out.println("Hello"));
+//
+//// Or with the builder
+//Thread t = Thread.ofVirtual().start(() -> doWork());
+//
+//// Most common: one virtual thread per task
+//try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+//        for (int i = 0; i < 100_000; i++) {
+//        executor.submit(() -> {
+//        Thread.sleep(1000);   // blocks cheaply
+//            return "done";
+//                    });
+//                    }
+//                    }

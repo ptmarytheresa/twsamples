@@ -4,6 +4,11 @@ class RoomTemperatureMonitor extends Thread {
 
     public void run() {
         for (int i = 1; i <= 5; i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(
                     "Monitoring room temperature: " + i
             );
@@ -20,7 +25,7 @@ public class HotelApp {
         monitor.start();
 
         System.out.println("Reception is serving customers");
-
+//    Thread workmaster;
 //        Runnable invoice =
 //                new BookingTask("Generate Invoice");
 //
@@ -30,7 +35,9 @@ public class HotelApp {
 //        Runnable loyalty =
 //                new BookingTask("Update Loyalty Points");
 //
-//        new Thread(invoice).start();
+//       workmaster= new Thread(invoice);
+//       workmaster.start();
+//
 //        new Thread(email).start();
 //        new Thread(loyalty).start();
     }

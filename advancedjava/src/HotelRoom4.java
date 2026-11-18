@@ -1,3 +1,4 @@
+//sealed - jdk17
 public class HotelRoom4 {
 
     sealed interface RoomCategory
@@ -21,6 +22,7 @@ public class HotelRoom4 {
     static final class SuiteRoom implements RoomCategory {
     }
 
+
     public static void main(String[] args) {
 
         RoomCategory room = new DeluxeRoom();
@@ -28,3 +30,9 @@ public class HotelRoom4 {
         System.out.println("Room category: " + room.getClass().getSimpleName());
     }
 }
+
+
+
+//sealed restricts which classes can implement or extend a type.
+//Permitted subclasses must follow Java's sealed-class rules.
+//Useful for payment types, booking types, room categories and order states.

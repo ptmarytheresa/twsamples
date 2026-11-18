@@ -1,3 +1,5 @@
+//Flexible Constructor Bodies ( Java 25)
+
 class Booking {
 
     String guestName;
@@ -27,3 +29,7 @@ class HotelBooking extends Booking {
                 + booking.guestName);
     }
 }
+
+//Earlier, an explicit super() or this() constructor invocation had to be the first statement.
+//Flexible constructor bodies allow certain statements before the constructor invocation.
+//Useful for validating input and preparing constructor arguments.

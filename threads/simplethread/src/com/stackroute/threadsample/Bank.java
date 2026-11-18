@@ -4,7 +4,7 @@ package com.stackroute.threadsample;
 class BankAccount {
     private int balance = 1000;
 
-      synchronized void withdraw(String who, int amount) {
+    void withdraw(String who, int amount) {
         if (balance >= amount) {
             System.out.println(who + " is withdrawing " + amount);
             try {
@@ -42,8 +42,8 @@ public class Bank {
     public static void main(String[] args) {
         BankAccount acc = new BankAccount();   // ONE shared account
 
-        Thread t1 = new Thread(new WithdrawTask(acc, "Husband", 800));
-        Thread t2 = new Thread(new WithdrawTask(acc, "Wife", 800));
+        Thread t1 = new Thread(new WithdrawTask(acc, "Wife", 800));
+        Thread t2 = new Thread(new WithdrawTask(acc, "Husband", 800));
 
         t1.start();
         t2.start();

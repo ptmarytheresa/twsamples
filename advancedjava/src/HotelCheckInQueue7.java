@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 //Sequenced Collections (Java 21)
-//getFirst(), getLast(), addFirst(), addLast() and reversed()
 public class HotelCheckInQueue7 {
 
     public static void main(String[] args) {
@@ -28,3 +27,10 @@ public class HotelCheckInQueue7 {
         System.out.println("Updated Queue: " + checkInQueue);
     }
 }
+
+//Java 21 introduced sequenced collection interfaces, including:
+//        - SequencedCollection
+//- SequencedSet
+//- SequencedMap
+
+//getFirst(), getLast(), addFirst(), addLast() and reversed()

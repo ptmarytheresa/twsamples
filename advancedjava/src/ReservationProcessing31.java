@@ -1,3 +1,4 @@
+// record pattern (jdk21)
 public class ReservationProcessing31 {
 
     record Guest(String guestName, String mobileNumber) {
@@ -33,3 +34,6 @@ public class ReservationProcessing31 {
         processReservation(reservation);
     }
 }
+
+//Record patterns destructure records.
+//Nested record patterns are supported.

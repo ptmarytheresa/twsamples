@@ -17,3 +17,7 @@ public class MembershipDiscount1 {
         System.out.println("Discount: " + discount + "%");
     }
 }
+
+//Switch can return a value.
+//Arrow syntax avoids fall-through.
+//No need for explicit break.

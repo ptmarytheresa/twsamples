@@ -1,3 +1,4 @@
+//switch patter jdk16
 class PremiumGuest {
     public double getDiscount() {
         return 20.0;
@@ -44,3 +45,6 @@ public class GuestPricing5 {
         calculateSpecialPrice(new RegularGuest());
     }
 }
+
+//The variable declared in instanceof is automatically cast.
+//No separate typecasting is required.

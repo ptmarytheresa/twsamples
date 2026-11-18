@@ -1,3 +1,4 @@
+//Pattern Matching for Switch (JDK 21)
 public class RestaurantPaymentService51 {
 
     interface PaymentMethod {
@@ -41,3 +42,7 @@ public class RestaurantPaymentService51 {
         processPayment(new CashPayment(1000));
     }
 }
+
+//Switch can match object types.
+//It can extract variables from matched types.
+//When all permitted types of a sealed hierarchy are covered, the compiler can verify exhaustiveness.
